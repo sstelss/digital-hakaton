@@ -3,8 +3,11 @@ import React, {useState} from 'react'
 // import { observer } from 'mobx-react-lite'
 import './index.css'
 import BASE_PATH from "../../BASE_PATH"
+import vkLogo from "../../img/vkIcon.svg"
 
 import { Redirect, Link } from 'react-router-dom'
+
+const VK = window.VK
 
 const UserPanel = () => {
   const [RegistrationPanel, setRegistrationPanel] = useState(false)
@@ -17,6 +20,12 @@ const UserPanel = () => {
   const [username, setUsername] = useState("")
 
 //   const store = React.useContext(Psw)
+
+  const handleVk = () =>{
+    VK.Auth.login((res) => {
+      console.log("VK res: ", res)
+    })
+  }
 
   const handleSetRegistration = () => {
     setRegistrationPanel(() => !RegistrationPanel)
@@ -144,9 +153,7 @@ const UserPanel = () => {
       </span>
       <br />
       <p className="my-3">Another way:</p>
-      <a href="/auth/facebook">
-        <img src="../../img/vkIcon.svg"></img>
-      </a>
+      <a href="#"><img src={vkLogo} onClick={handleVk}></img></a>
     </form>
   )
 
@@ -200,9 +207,7 @@ const UserPanel = () => {
       <br />
       <p className="my-3">Another way:</p>
 
-      <a href="/auth/facebook">
-        <img src="../../img/vkIcon.svg"></img>
-      </a>
+       <a href="#"><img src={vkLogo} onClick={handleVk}></img></a>
     </form>
   )
 

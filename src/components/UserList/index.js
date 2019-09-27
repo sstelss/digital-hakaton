@@ -21,7 +21,7 @@ export default function UserList() {
 
   return (
     <div className="UserList">
-        UserList
+        UserList: 
         {BASE_PATH}
         {/* Info: {info} */}
         {List}
