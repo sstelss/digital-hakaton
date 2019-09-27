@@ -23,7 +23,6 @@ export default function UserList() {
     <div className="UserList">
         UserList: 
         {BASE_PATH}
-        {/* Info: {info} */}
         {List}
     </div>
     );

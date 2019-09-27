@@ -33,54 +33,56 @@ const UserPanel = () => {
 
   const chekReg = event => {
     event.preventDefault()
-    // if (password !== confirmPassword) {
-    //   setErrorText(() => 'Passwords are different!!!')
-    // } else if (username.length <= 3) {
-    //   setErrorText(() => 'Username must contein more than 3 simbols!!!')
-    // } else if (password.length <= 3) {
-    //   setErrorText(() => 'Password must contein more than 3 simbols!!!')
-    // } else {
-    //   fetch('/reg', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json;charset=utf-8'
-    //     },
-    //     body: JSON.stringify({
-    //       username: username,
-    //       password: password
-    //     })
-    //   })
-    //     .then(response => response.json())
-    //     .then(res => {
-    //       setErrorText(() => res.err)
-    //       if (res.status_text === 'OK') {
-    //         chekLogin(event)
-    //       }
-    //     })
-    //     .catch(err => console.log(err))
-    // }
+    if (password !== confirmPassword) {
+      setErrorText(() => 'Passwords are different!!!')
+    } else if (username.length <= 3) {
+      setErrorText(() => 'Username must contein more than 3 simbols!!!')
+    } else if (password.length <= 3) {
+      setErrorText(() => 'Password must contein more than 3 simbols!!!')
+    } else {
+      fetch(BASE_PATH + '/reg', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify({
+          username: username,
+          password: password
+        })
+      })
+        .then(response => response.json())
+        .then(res => {
+          setErrorText(() => res.err)
+          if (res.status_text === 'OK') {
+            // chekLogin(event)
+            alert("All is good!")
+          }
+        })
+        .catch(err => console.log(err))
+    }
   }
 
   const chekLogin = event => {
     event.preventDefault()
-    // fetch('/login', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json;charset=utf-8'
-    //   },
-    //   body: JSON.stringify({
-    //     username: username,
-    //     password: password
-    //   })
-    // })
-    //   .then(response => response.json())
-    //   .then(res => {
-    //     setErrorText(() => res.err)
-    //     if (res.status_text === 'OK') {
-    //       setRed(() => true)
-    //     }
-    //   })
-    //   .catch(err => console.log(err))
+    fetch(BASE_PATH + '/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8'
+      },
+      body: JSON.stringify({
+        username: username,
+        password: password
+      })
+    })
+      .then(response => response.json())
+      .then(res => {
+        setErrorText(() => res.err)
+        if (res.status_text === 'OK') {
+          alert("Autorization is ok!")
+          setRed(() => true)
+        }
+      })
+      .catch(err => console.log(err))
   }
 
   const reg = (
