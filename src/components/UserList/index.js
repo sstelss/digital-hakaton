@@ -1,23 +1,30 @@
 import React from 'react';
 import './index.css';
+import BASE_PATH from '../../BASE_PATH'
 
 export default function UserList() {
 
-  const [RegStatus, setRegStatus] = React.useState(false)
+  const [info, setInfo] = React.useState([])
 
   React.useMemo(() => {
-    fetch('/currentUser')
+    fetch(BASE_PATH + '/volunteer/1/tasks')
       .then(response => response.json())
       .then(res => {
-        if (res.status_text === 'OK') {
-          setRegStatus(true)
-        }
+        setInfo(res)
+        console.log("res: ", res)
       })
+  },[])
+
+  const List = info.map((value, index) =>{
+    return <p key={index}>{value.taskName}</p>
   })
 
   return (
     <div className="UserList">
         UserList
+        {BASE_PATH}
+        {/* Info: {info} */}
+        {List}
     </div>
     );
 }
