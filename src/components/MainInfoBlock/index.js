@@ -2,6 +2,12 @@ import React from 'react';
 import './index.css';
 import gaysImg from '../../img/mainPage/gays.png'
 import crowd from '../../img/mainPage/crowd.png'
+import circle from '../../img/mainPage/circle.png'
+import messegeRectangle from '../../img/mainPage/messegeRectangle.png'
+import underIcon from '../../img/mainPage/UnderIcon.png'
+import zoomGlass from '../../img/mainPage/zoomGlass.png'
+import okInCircle from '../../img/mainPage/okInCircle.png'
+import chainInCircle from '../../img/mainPage/chainInCircle.png'
 
 export default function MainInfoBlock() {
   return (
@@ -89,11 +95,69 @@ export default function MainInfoBlock() {
               предлагая тесты и задания в увлекательно-игровой форме.
             </span>
             <span className="midlleText">
-              прочти <a href="#" className="instruction">инструкцию</a> и выполни первое задание уже сейчас!
+              прочти <a href="#" className="instructionLink">инструкцию</a> и выполни первое задание уже сейчас!
             </span>
           </div>
         
-        
+          <div className="instrutionStack">
+            <div className="firstStep">
+              <div className="circleContainer">
+                <span className="stepInCircle">шаг</span> 
+                <span className="numberOnCircle">01</span>
+              </div>
+
+              <div className="messegeRectangle">
+                <span className="textInRectangle">перейдите по ссылке, указанной в задании</span>
+              </div>
+
+              <div className="chainInCircle"></div>
+
+              <div className="stepTextContainer">
+                <span className="stepText">кратко ознакомтесь с контекстом и тематикой ресурса</span>
+              </div>
+
+              <div className="underIcon"></div>
+
+            </div>
+            
+            <div className="secondStep">
+              <div className="circleContainer">
+                <span className="stepInCircle">шаг</span> 
+                <span className="numberOnCircle">02</span>
+              </div>
+
+              <div className="messegeRectangle">
+                <span className="textInRectangle">найдите на странице ключевое слово/фразу</span>
+              </div>
+
+              <div className="zommGlase"></div>
+
+              <div className="stepTextContainer">
+                <span className="stepText" style={{"font-size": "24px"}}>подсказка в задании поможет вам быстро найти нужный раздел</span>
+              </div>
+
+              <div className="underIcon"></div>
+              
+            </div>
+            <div className="therdStep">
+              <div className="circleContainer">
+                <span className="stepInCircle">шаг</span> 
+                <span className="numberOnCircle">03</span>
+              </div>
+
+              <div className="messegeRectangle">
+                <span className="textInRectangle">введите найденное в поле "ответ"</span>
+              </div>
+
+              <div className="zommGlase"></div>
+
+              <div className="stepTextContainer">
+                <span className="stepText">поздравляем. вы успешно выполнили первое задание</span>
+              </div>
+
+              <div className="underIcon"></div>
+            </div>
+          </div>
         
         </div>
     </div>

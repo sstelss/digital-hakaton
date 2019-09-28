@@ -116,11 +116,101 @@
     padding-top: 20px;
 }
 
-.instruction{
+.instructionLink{
     color: #24aea2;
     font-weight: 600;
 }
 
 .midlleText{
     font-size: 24px;
+}
+
+.instrutionStack{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.firstStep, .secondStep, .therdStep{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circleContainer{
+    background-image: url('../../img/mainPage/circle.png');
+    background-repeat: no-repeat;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 700;
+    color:white;
+    margin-top: 20px;
+}
+
+.messegeRectangle{
+    background-image: url('../../img/mainPage/messegeRectangle.png');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 5px;
+    margin-top: 27px;
+    color:white;
+}
+
+.textInRectangle{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+}
+
+.chainInCircle{
+    background-image: url('../../img/mainPage/chainInCircle.png');
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    margin-top: 15px;
+}
+
+.zommGlase{
+    background-image: url('../../img/mainPage/zoomGlass.png');
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    margin-top: 15px;
+}
+
+.okInCercle{
+    background-image: url('../../img/mainPage/okInCircle.png');
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    margin-top: 15px;
+}
+
+.stepTextContainer{
+    width: 250px;
+}
+.stepText{
+    text-align: center;
+    color: #c3c3c3;
+    font-size: 26px;
+}
+
+.underIcon{
+    background-image: url('../../img/mainPage/UnderIcon.png');
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 50px;
+    margin-top: 7px;
+
 }
