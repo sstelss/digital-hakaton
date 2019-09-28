@@ -1,0 +1,49 @@
+
+.Navbar{
+    background-color: #24aea2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logoBox{
+    padding-top: 10px;
+    padding-bottom: 6px;
+}
+
+.menuElements, .regButtons{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.button{
+    border: 1px solid #feffff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: #feffff;
+}
+
+.buttonAutorization{
+    background-color: #52bab1;
+}
+
+.buttonRegistration{
+    background-color: #299d93;
+}
+
+.menuElement{
+    color: #feffff;
+    font-size: 18px;
+}
+
+.menuElement:hover, .button:hover{
+    cursor: pointer;
+}

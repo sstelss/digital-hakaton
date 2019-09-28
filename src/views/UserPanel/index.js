@@ -1,6 +1,4 @@
 import React, {useState} from 'react'
-// import Psw from './passwordMobx'
-// import { observer } from 'mobx-react-lite'
 import './index.css'
 import BASE_PATH from "../../BASE_PATH"
 import vkLogo from "../../img/vkIcon.svg"
@@ -19,11 +17,10 @@ const UserPanel = () => {
   const [confirmPassword, setConfirmPassword] = useState("")
   const [username, setUsername] = useState("")
 
-//   const store = React.useContext(Psw)
-
   const handleVk = () =>{
     VK.Auth.login((res) => {
       console.log("VK res: ", res)
+      console.log("res.status: ", res.status)
     })
   }
 
