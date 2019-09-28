@@ -1,15 +1,79 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './index.css';
 import gaysImg from '../../img/mainPage/gays.png'
 import crowd from '../../img/mainPage/crowd.png'
-import circle from '../../img/mainPage/circle.png'
-import messegeRectangle from '../../img/mainPage/messegeRectangle.png'
-import underIcon from '../../img/mainPage/UnderIcon.png'
-import zoomGlass from '../../img/mainPage/zoomGlass.png'
-import okInCircle from '../../img/mainPage/okInCircle.png'
-import chainInCircle from '../../img/mainPage/chainInCircle.png'
 
 export default function MainInfoBlock() {
+
+  const [donatSum, setDonatSum] = useState('')
+  const [donatStep, setDonatStep] = useState(1)
+
+  const smartNavigation = () => {
+    if (donatStep === 1){
+      return(
+        <>
+          <div className="point1 done">
+            <span className="numberTask">1</span>
+          </div>
+          <div className="line1 line"></div>
+          <div className="point2 notDone">
+            <span className="numberTask">2</span>
+          </div>
+          <div className="line2 line"></div>
+          <div className="point3 notDone">
+            <span className="numberTask">3</span>
+          </div>
+
+          <div className="label1">размер</div>
+          <div className="label2">выбор оплаты</div>
+          <div className="label3">оплата</div>
+        </>
+      )
+    }
+    if (donatStep === 2){
+      return(
+        <>
+          <div className="point1 notDone">
+            <span className="numberTask">1</span>
+          </div>
+          <div className="line1 line"></div>
+          <div className="point2 done">
+            <span className="numberTask">2</span>
+          </div>
+          <div className="line2 line"></div>
+          <div className="point3 notDone">
+            <span className="numberTask">3</span>
+          </div>
+
+          <div className="label1">размер</div>
+          <div className="label2">выбор оплаты</div>
+          <div className="label3">оплата</div>
+        </>
+      )
+    }
+    if (donatStep === 3){
+      return(
+        <>
+          <div className="point1 notDone">
+            <span className="numberTask">1</span>
+          </div>
+          <div className="line1 line"></div>
+          <div className="point2 notDone">
+            <span className="numberTask">2</span>
+          </div>
+          <div className="line2 line"></div>
+          <div className="point3 done">
+            <span className="numberTask">3</span>
+          </div>
+
+          <div className="label1">размер</div>
+          <div className="label2">выбор оплаты</div>
+          <div className="label3">оплата</div>
+        </>
+      )
+    }
+  }
+
   return (
     <div className="MainInfoBlock">
         <div className="infoContainer">
@@ -73,7 +137,7 @@ export default function MainInfoBlock() {
                 свежий взгляд
               </span>
               <span className="ordinaryText">
-                Мы разрабатываем новый для рф вид волонтерства, основой для которого, служит желание делиться своими знаниями и профессиональными навыками. наша цель – создание сообщества специалистов, модернизирующих сферу благотворительности.
+                Мы разрабатываем новый для рф вид волонтерства, основой для которого, служит желание делиться своими знаниями и профессиональными навыками. Наша цель – создание сообщества специалистов, модернизирующих сферу благотворительности.
               </span>
             </div>
 
@@ -133,7 +197,7 @@ export default function MainInfoBlock() {
               <div className="zommGlase"></div>
 
               <div className="stepTextContainer">
-                <span className="stepText" style={{"font-size": "24px"}}>подсказка в задании поможет вам быстро найти нужный раздел</span>
+                <span className="stepText">подсказка в задании поможет вам быстро найти нужный раздел</span>
               </div>
 
               <div className="underIcon"></div>
@@ -159,6 +223,44 @@ export default function MainInfoBlock() {
             </div>
           </div>
         
+          <div className="greyTextLine">
+            <span className="midlleText">
+              после выполнения первого и последующих заданий, вы сможите отслеживать вашу
+            </span>
+            <span className="midlleText" style={{"margin-bottom": "10px"}}>
+              статистику, рейтинг и награды в <a href="#" className="instructionLink">личном кабинете</a>
+            </span>
+            <div className="bottomTask" onClick={() => alert("Get task")}>получить задание</div>
+
+          </div>
+
+          <div className="donatContainer">
+            <span className="headerText emetedText" style={{"marginBottom": "10px"}}>сделать пожертвование</span>
+
+            <div className="smartNavigation">
+              {smartNavigation()}
+            </div>
+
+            <div className="donatMenu">
+              <div className="donatTable">
+                <div className="e1" onClick={()=>setDonatSum(100)}>100 &#x20bd;</div>
+                <div className="e2" onClick={()=>setDonatSum(200)}>200 &#x20bd;</div>
+                <div className="e3" onClick={()=>setDonatSum(500)}>500 &#x20bd;</div>
+                <div className="e4" onClick={()=>setDonatSum(1000)}>1000 &#x20bd;</div>
+                <div className="e5" onClick={()=>setDonatSum(1500)}>1500 &#x20bd;</div>
+                <div className="e6"onClick={()=>setDonatSum(2000)}>2000 &#x20bd;</div>
+                <div className="e7" onClick={()=>setDonatSum(10000)}>10000 &#x20bd;</div>
+                <div className="specialSum">
+                  <input value={donatSum} placeholder="Другая сумма" onChange={(e)=>setDonatSum(e.target.value)}></input>
+                </div>
+
+              </div>
+
+              <div className="bottomContinue" onClick={() => setDonatStep(donatStep+1)}>продолжить</div>
+            </div>
+          </div>
+
+
         </div>
     </div>
     );

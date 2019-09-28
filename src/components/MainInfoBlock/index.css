@@ -1,3 +1,9 @@
+@import url("../../fonts/bebas/bebasneue.css");
+
+.MainInfoBlock{
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
 .headerInfo{
     display: flex;
     flex-direction: column;
@@ -5,6 +11,8 @@
     text-align: center;
     margin-top: 17px;
     margin-bottom: 17px;
+
+    font-family: 'Bebas Neue';
 }
 
 .headerText{
@@ -203,7 +211,7 @@
 .stepText{
     text-align: center;
     color: #c3c3c3;
-    font-size: 26px;
+    font-size: 25px;
 }
 
 .underIcon{
@@ -213,4 +221,177 @@
     height: 50px;
     margin-top: 7px;
 
+}
+
+.donatContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donatTable{
+    margin-top:20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5vw;
+    margin-bottom: 15px;
+    grid-template-areas:    "el1 el2 el3"
+                            "el4 el5 el6"
+                            "el7 footer footer"
+}
+
+.donatTable>div{
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+/* .donatTable>div:hover{
+    cursor: pointer;
+    background-color: #c3c3c3;
+} */
+
+.e1{
+    grid-area: el1;
+}
+
+.e2{
+    grid-area: el2;
+}
+
+.e3{
+    grid-area: el3;
+}
+
+.e4{
+    grid-area: el4;
+}
+
+.e5{
+    grid-area: el5;
+}
+
+.e6{
+    grid-area: el6;
+}
+
+.e7{
+    grid-area: el7;
+}
+
+.e1:hover, .e2:hover, .e3:hover, .e4:hover, .e5:hover, .e6:hover, e7:hover{
+    cursor: pointer;
+    background-color: #c3c3c3;
+
+}
+
+.e1:checked , .e2:checked , .e3:checked , .e4:checked , .e5:checked , .e6:checked {
+    background-color: gold;
+
+}
+
+.specialSum{
+    grid-area: footer;
+}
+
+.bottomContinue{
+    border: 1px solid #1ca6b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: #1ca6b2;
+    width: 75px;
+    height: 15px;
+    margin: auto;
+}
+
+.bottomContinue:hover{
+    cursor: pointer;
+    background-color: #e4f1f2
+}
+
+.bottomTask{
+    border: 1px solid #1ca6b2;
+    background-color: #35b090;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: #ffffff;
+    width: 150px;
+    height: 15px;
+    margin: auto;
+    font-weight: 700;
+}
+
+.bottomTask:hover{
+    background-color: #44d4ae;
+    cursor: pointer;
+}
+
+.smartNavigation{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; */
+    display: grid;
+    grid-column: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:    "point1 line1 point2 line2 point3"
+                            "label1 empty1 label2 empty2 label3"
+}
+
+.done, .notDone{
+    background-repeat: no-repeat;
+    width: 37px;
+    height: 37px;
+     margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.done{
+    background-image: url('../../img/mainPage/circleFillSmall.png');
+}
+
+.notDone{
+    background-image: url('../../img/mainPage/circleNotFillSmall.png');
+}
+
+.line{
+    background-repeat: repeat-x;
+    background-image: url('../../img/mainPage/line.png');
+    background-position: 10px;
+    width: 100px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.point1{
+    grid-area: point1;
+}
+
+.point2{
+    grid-area: point2;
+}
+
+.line1{
+    grid-area: line1;
+}
+
+.line2{
+    grid-area: line2;
+}
+
+.label1{
+    grid-area: label1;
+}
+
+.label2{
+    grid-area: label2;
+}
+
+.label3{
+    grid-area: label3;
 }
