@@ -59,9 +59,28 @@ export default function MainInfoBlock() {
             <div className="crowdContainer">
               <img className="crowdImg" src={crowd}></img>
             </div>
-
-
           </div>
+
+          <div className="freshVieveAndAkcent">
+            <div className="freshVieve">
+              <span className="largeText emetedText">
+                свежий взгляд
+              </span>
+              <span className="ordinaryText">
+                Мы разрабатываем новый для рф вид волонтерства, основой для которого, служит желание делиться своими знаниями и профессиональными навыками. наша цель – создание сообщества специалистов, модернизирующих сферу благотворительности.
+              </span>
+            </div>
+
+            <div className="akcent">
+              <span className="largeText emetedText">
+                акцент на достижение целей
+              </span>
+              <span className="ordinaryText">
+                 С помощью нашего сервиса фонды смогут вы на новый уровень, благодаря перераспределениЮ задач между интеллектуальными волонтерами, которые в свою очередь смогут выполнять амбициозные задачи,  которые украсят любое портфолио.
+              </span>
+            </div>
+          </div>
+
         </div>
     </div>
     );

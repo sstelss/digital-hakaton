@@ -65,6 +65,11 @@
     color: #ffffff;
 }
 
+/* 
+.infoBlock2{
+    background-image: url("../../img/mainPage/logoBig.png")
+} */
+
 .buttomJoin{
     border: 1px solid #1ca6b2;
     display: flex;
@@ -86,4 +91,17 @@
 .crowdContainer{
     display: flex;
     justify-content: center;
+}
+
+.freshVieveAndAkcent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.akcent, .freshVieve{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 15px;
 }
