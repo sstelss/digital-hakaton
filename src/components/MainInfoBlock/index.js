@@ -29,14 +29,14 @@ export default function MainInfoBlock() {
             </div>
           </div>
 
-          <div className="textLine">
-            <span className="ordinaryText textInTextLine">
+          <div className="greenTextLine">
+            <span className="ordinaryText textInGreenTextLine">
               Теперь самое время задать себе второй вопрос: что конкретно я хочу? Кому и как я готов помогать?
             </span>
-            <span className="ordinaryText textInTextLine">
+            <span className="ordinaryText textInGreenTextLine">
               Тушить пожары? Играть с детьми в больнице? Учить сирот в детдомах полезным навыкам? Заботиться о чистоте парков и скверов в городе? 
             </span>
-            <span className="ordinaryText textInTextLine">
+            <span className="ordinaryText textInGreenTextLine">
               Пока ответ не найден, бессмысленно двигаться дальше.
             </span>
           </div>
@@ -76,11 +76,25 @@ export default function MainInfoBlock() {
                 акцент на достижение целей
               </span>
               <span className="ordinaryText">
-                 С помощью нашего сервиса фонды смогут вы на новый уровень, благодаря перераспределениЮ задач между интеллектуальными волонтерами, которые в свою очередь смогут выполнять амбициозные задачи,  которые украсят любое портфолио.
+                 С помощью нашего сервиса фонды смогут вы на новый уровень, благодаря перераспределению задач между интеллектуальными волонтерами, которые в свою очередь смогут выполнять амбициозные задачи,  которые украсят любое портфолио.
               </span>
             </div>
           </div>
 
+          <div className="greyTextLine">
+            <span className="midlleText">
+              наша миссия - обучить тебя и помочь выбрать подходящее направление волонтёрской деятельности, 
+            </span>
+            <span className="midlleText">
+              предлагая тесты и задания в увлекательно-игровой форме.
+            </span>
+            <span className="midlleText">
+              прочти <a href="#" className="instruction">инструкцию</a> и выполни первое задание уже сейчас!
+            </span>
+          </div>
+        
+        
+        
         </div>
     </div>
     );
