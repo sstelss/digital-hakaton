@@ -4,6 +4,7 @@ import './App.css';
 import MainPage from "./views/MainPage"
 import UserPanel from './views/UserPanel'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Orders from './views/Orders';
 
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
       <div className="App">
         <Route path="/" exact component={MainPage} />
         <Route path="/userPanel" component={UserPanel} />
+        <Route path="/orders" component={Orders} />
+
       </div>
     </Router>
   );

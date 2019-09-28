@@ -278,16 +278,12 @@
     grid-area: el7;
 }
 
-.e1:hover, .e2:hover, .e3:hover, .e4:hover, .e5:hover, .e6:hover, e7:hover{
+.e1:hover, .e2:hover, .e3:hover, .e4:hover, .e5:hover, .e6:hover, .e7:hover{
     cursor: pointer;
     background-color: #c3c3c3;
 
 }
 
-.e1:checked , .e2:checked , .e3:checked , .e4:checked , .e5:checked , .e6:checked {
-    background-color: gold;
-
-}
 
 .specialSum{
     grid-area: footer;

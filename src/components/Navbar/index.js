@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import { Redirect, Link } from 'react-router-dom'
 import logo from '../../img/logo.png'
 
 export default function Navbar() {
@@ -14,7 +15,7 @@ export default function Navbar() {
         <div className="menu">
           <ul className="menuElements">
             <li className="menuElement" onClick={()=>alert("About project")}> О проекте </li>
-            <li className="menuElement" onClick={()=>alert("Reports")}> Отчеты </li>
+            <li className="menuElement"> <Link to="/orders">Отчеты</Link> </li>
             <li className="menuElement" onClick={()=>alert("Contacs")}> Контакты </li>
           </ul>
         </div>
