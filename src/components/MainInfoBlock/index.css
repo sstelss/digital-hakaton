@@ -9,7 +9,11 @@
 
 .headerText{
     color: #24aea2;
-    font-size: 20px;
+    font-size: 27px;
+}
+
+.largeText{
+    font-size: 27px;
 }
 
 .textWithImgContainer{
@@ -59,6 +63,27 @@
 
 .textInTextLine{
     color: #ffffff;
+}
 
+.buttomJoin{
+    border: 1px solid #1ca6b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: #1ca6b2;
+    width: 150px;
+    height: 35px;
 
+    margin: auto;
+}
+
+.buttomJoin:hover{
+    cursor: pointer;
+    background-color: #e4f1f2
+}
+
+.crowdContainer{
+    display: flex;
+    justify-content: center;
 }

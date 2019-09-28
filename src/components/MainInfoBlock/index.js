@@ -1,13 +1,14 @@
 import React from 'react';
 import './index.css';
 import gaysImg from '../../img/mainPage/gays.png'
+import crowd from '../../img/mainPage/crowd.png'
 
 export default function MainInfoBlock() {
   return (
     <div className="MainInfoBlock">
         <div className="infoContainer">
           <div className="headerInfo">
-            <span className="headerText">приветствуем тебя, дорогой друг!</span>
+            <span className="headerText emetedText">приветствуем тебя, дорогой друг!</span>
             <span className="headerText">мы знаем почему ты здесь и поможем тебе стать настоящим волонтером!</span>
           </div>
 
@@ -38,6 +39,28 @@ export default function MainInfoBlock() {
             <span className="ordinaryText textInTextLine">
               Пока ответ не найден, бессмысленно двигаться дальше.
             </span>
+          </div>
+
+
+          <div className="infoBlock2">
+            <div className="headerInfo">
+              <span className="headerText emetedText">
+                хотите стать волонтером?
+              </span>
+              <span className="largeText">
+                присоединяйся к тысячам наших волонтёров и меняй мир к лучшему!
+              </span>
+            </div>
+             
+            <div className="buttomJoin" onClick={() => alert("Join to us!")}>
+                стать волонтером
+            </div>
+
+            <div className="crowdContainer">
+              <img className="crowdImg" src={crowd}></img>
+            </div>
+
+
           </div>
         </div>
     </div>
