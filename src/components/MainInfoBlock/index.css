@@ -1,0 +1,61 @@
+.headerInfo{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    margin-top: 17px;
+    margin-bottom: 17px;
+}
+
+.headerText{
+    color: #24aea2;
+    font-size: 20px;
+}
+
+.textWithImgContainer{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.textBoxLeft, .textBoxRight{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.textBoxLeft{
+    padding-left: 40px;
+}
+
+.ordinaryText{
+    font-size: 20px;
+}
+
+
+.emetedText{
+    color:#24aea2;
+    font-weight: 600;
+}
+
+.gaysImageContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.textLine{
+    background-color: #1ca6b2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textInTextLine{
+    color: #ffffff;
+
+
+}
