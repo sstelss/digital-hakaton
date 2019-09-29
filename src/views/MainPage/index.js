@@ -10,7 +10,6 @@ function MainPage() {
     <div className="MainPage">
       <Navbar/>
       <MainInfoBlock/>
-      <Link to="/userPanel">To user panel</Link>
     </div>
   );
 }

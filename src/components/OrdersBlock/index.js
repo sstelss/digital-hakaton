@@ -20,6 +20,7 @@ export default function UserList() {
 
 
   const taskDone = (tasksId) =>{
+    setAmountActiveTasks(amountActiveTasks-1)
     fetch(BASE_PATH + '/volunteer/' + id + '/tasks/' + tasksId + '/complete', {
       method: 'POST',
       headers: {
@@ -35,7 +36,7 @@ export default function UserList() {
       })
       .catch(err => console.log(err))
 
-      setAmountActiveTasks(amountActiveTasks-1)
+      
   }
 
   const List = list.map((value) => {

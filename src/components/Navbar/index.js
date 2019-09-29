@@ -14,7 +14,7 @@ export default function Navbar() {
 
         <div className="menu">
           <ul className="menuElements">
-            <li className="menuElement" onClick={()=>alert("About project")}> О проекте </li>
+            <li className="menuElement"> <Link to="/">О проекте</Link></li>
             <li className="menuElement"> <Link to="/orders">Отчеты</Link> </li>
             <li className="menuElement" onClick={()=>alert("Contacs")}> Контакты </li>
           </ul>

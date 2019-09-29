@@ -5,14 +5,55 @@ import crowd from '../../img/mainPage/crowd.png'
 
 export default function MainInfoBlock() {
 
-  const [donatSum, setDonatSum] = useState('')
+  const [donatSum, setDonatSum] = useState('0')
   const [donatStep, setDonatStep] = useState(1)
+  const [donatWay, setDonatWay] = useState("квитанция")
+
+  const donatTable = (
+    <div className="donatTable">
+      <div className="e1" onClick={()=>setDonatSum(100)}>100 &#x20bd;</div>
+      <div className="e2" onClick={()=>setDonatSum(200)}>200 &#x20bd;</div>
+      <div className="e3" onClick={()=>setDonatSum(500)}>500 &#x20bd;</div>
+      <div className="e4" onClick={()=>setDonatSum(1000)}>1000 &#x20bd;</div>
+      <div className="e5" onClick={()=>setDonatSum(1500)}>1500 &#x20bd;</div>
+      <div className="e6"onClick={()=>setDonatSum(2000)}>2000 &#x20bd;</div>
+      <div className="e7" onClick={()=>setDonatSum(10000)}>10000 &#x20bd;</div>
+      <div className="specialSum">
+        <input value={donatSum} placeholder="Другая сумма" onChange={(e)=>setDonatSum(e.target.value)}></input>
+      </div>
+    </div>
+  )
+
+  const chooseWay = (
+    <ul className="wayList">
+      <li className={donatWay === "квитанция" ? "wayListElement choosed" : "wayListElement"} onClick={() => setDonatWay("квитанция")}>квитанция</li>
+      <li className={donatWay === "SMS на номер" ? "wayListElement choosed" : "wayListElement"} onClick={() => setDonatWay("SMS на номер")}>SMS на номер 3316</li>
+      <li className={donatWay === "яндекс-кошелек" ? "wayListElement choosed" : "wayListElement"} onClick={() => setDonatWay("яндекс-кошелек")}>яндекс-кошелек</li>
+      {/* <li className={donatWay === "для юридических лиц" ? "wayListElement choosed" : "wayListElement"} onClick={() => setDonatWay("для юридических лиц")}>для юридических лиц</li> */}
+    </ul>
+  )
+
+  const donatBody = () => {
+    if(donatStep === 1){
+      return donatTable
+    }
+    if(donatStep === 2){
+      return chooseWay
+    }
+    if(donatStep === 3){
+      return(
+        <div style={{margin: "10px 0px"}}>
+          <div>Отправка суммы {donatSum} способом {donatWay}</div>
+        </div>
+      )
+    }
+  }
 
   const smartNavigation = () => {
     if (donatStep === 1){
       return(
         <>
-          <div className="point1 done">
+          <div className="point1 done" onClick={() => setDonatStep(1)}>
             <span className="numberTask">1</span>
           </div>
           <div className="line1 line"></div>
@@ -33,11 +74,11 @@ export default function MainInfoBlock() {
     if (donatStep === 2){
       return(
         <>
-          <div className="point1 notDone">
+          <div className="point1 notDone" onClick={() => setDonatStep(1)}>
             <span className="numberTask">1</span>
           </div>
           <div className="line1 line"></div>
-          <div className="point2 done">
+          <div className="point2 done" onClick={() => setDonatStep(2)}>
             <span className="numberTask">2</span>
           </div>
           <div className="line2 line"></div>
@@ -54,15 +95,15 @@ export default function MainInfoBlock() {
     if (donatStep === 3){
       return(
         <>
-          <div className="point1 notDone">
+          <div className="point1 notDone" onClick={() => setDonatStep(1)}>
             <span className="numberTask">1</span>
           </div>
           <div className="line1 line"></div>
-          <div className="point2 notDone">
+          <div className="point2 notDone" onClick={() => setDonatStep(2)}>
             <span className="numberTask">2</span>
           </div>
           <div className="line2 line"></div>
-          <div className="point3 done">
+          <div className="point3 done" onClick={() => setDonatStep(3)}>
             <span className="numberTask">3</span>
           </div>
 
@@ -74,6 +115,11 @@ export default function MainInfoBlock() {
     }
   }
 
+  const nextDonatStep = () => {
+    if(donatStep+1 !== 4){
+      setDonatStep(donatStep+1)
+    }
+   }
   return (
     <div className="MainInfoBlock">
         <div className="infoContainer">
@@ -242,23 +288,15 @@ export default function MainInfoBlock() {
             </div>
 
             <div className="donatMenu">
-              <div className="donatTable">
-                <div className="e1" onClick={()=>setDonatSum(100)}>100 &#x20bd;</div>
-                <div className="e2" onClick={()=>setDonatSum(200)}>200 &#x20bd;</div>
-                <div className="e3" onClick={()=>setDonatSum(500)}>500 &#x20bd;</div>
-                <div className="e4" onClick={()=>setDonatSum(1000)}>1000 &#x20bd;</div>
-                <div className="e5" onClick={()=>setDonatSum(1500)}>1500 &#x20bd;</div>
-                <div className="e6"onClick={()=>setDonatSum(2000)}>2000 &#x20bd;</div>
-                <div className="e7" onClick={()=>setDonatSum(10000)}>10000 &#x20bd;</div>
-                <div className="specialSum">
-                  <input value={donatSum} placeholder="Другая сумма" onChange={(e)=>setDonatSum(e.target.value)}></input>
-                </div>
 
-              </div>
-
-              <div className="bottomContinue" onClick={() => setDonatStep(donatStep+1)}>продолжить</div>
+              {donatBody()}
+              
+              <div className="bottomContinue" onClick={() => nextDonatStep()}>продолжить</div>
             </div>
           </div>
+
+
+          <div className="testedPng"></div>
 
 
         </div>
